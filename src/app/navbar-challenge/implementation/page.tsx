@@ -149,7 +149,7 @@ export default function Implementation() {
           {/* Logo Container */}
 
           {navbarContainer.length == 2 && (
-            <div className="">
+            <div className="border-l-2 border-gray-400 px-3">
               <h1 className="text-blue-500 border p-1 inline-block">
                 Logo Container
               </h1>
@@ -234,7 +234,7 @@ export default function Implementation() {
           {/* Navbar items container */}
 
           {logoContainer.length === 3 && (
-            <div>
+            <div className="border-l-2 border-gray-400 px-3">
               <h1 className="text-orange-500 border p-1 inline-block">
                 Navbar Items Container
               </h1>

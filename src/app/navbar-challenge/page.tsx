@@ -87,7 +87,7 @@ export default function Challenge() {
               <div className="my-2">
                 <Link href="/navbar-challenge/implementation">
                   <button className="px-8 py-2 bg-purple-500 text-gray-100 rounded-full font-medium cursor-pointer hover:bg-purple-600 duration-300 delay-75 ">
-                    Start Coding
+                    Start Learning
                   </button>
                 </Link>
               </div>
@@ -143,7 +143,7 @@ export default function Challenge() {
             </div>
           </div>
 
-          <div className="w-full px-5">
+          <div className="w-full px-5 ">
             <h1 className="text-pink-500 border p-1 inline-block">
               Navbar Container
             </h1>
