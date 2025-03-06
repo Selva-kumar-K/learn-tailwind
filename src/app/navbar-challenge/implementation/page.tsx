@@ -4,7 +4,6 @@ import Confetti from "react-confetti";
 
 import Image from "next/image";
 import Logo from "./../../../../public/cool.png";
-import Gif from "./../../../../public/mrbean-dance.gif";
 import { navMenus } from "@/app/libs/menus";
 
 export default function Implementation() {
