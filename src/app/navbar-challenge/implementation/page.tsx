@@ -5,6 +5,7 @@ import Confetti from "react-confetti";
 import Image from "next/image";
 import Logo from "./../../../../public/cool.png";
 import { navMenus } from "@/app/libs/menus";
+import Link from "next/link";
 
 export default function Implementation() {
   const [navbarContainer, setNavbarContainer] = useState<string[]>([]);
@@ -89,7 +90,7 @@ export default function Implementation() {
 
         {/* Content */}
 
-        <div className="w-full grid grid-cols-3 gap-5 my-20">
+        <div className="w-full grid grid-cols-3 gap-5 mt-20 font-semibold text-gray-500">
           {/* Navbar Container */}
           <div className="">
             <h1 className="text-pink-500 border p-1 inline-block">
@@ -300,13 +301,15 @@ export default function Implementation() {
           )}
         </div>
 
-        {/* <div className="marquee-container">
-          {party && (
-            <div className="marquee-image">
-              <Image src={Gif} alt="gif" />
-            </div>
-          )}
-        </div> */}
+        {party && (
+          <div className="flex justify-end mt-10">
+            <Link href="/" className="cursor-pointer">
+              <button className="px-8 py-2 bg-purple-500 text-gray-100 rounded-full font-medium cursor-pointer hover:bg-purple-600 duration-300 delay-75 animate-pulse">
+                Ready for Next Challenge 💣
+              </button>
+            </Link>
+          </div>
+        )}
       </section>
     </div>
   );

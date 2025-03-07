@@ -150,7 +150,7 @@ export default function Challenge() {
             <Image
               src={navbarContainerLogo}
               alt="navbar-container"
-              className="w-full h-14 mb-3"
+              className="w-full h-14 object-cover my-3"
             />
 
             <h1 className="text-blue-500 border p-1 inline-block">
@@ -159,7 +159,7 @@ export default function Challenge() {
             <Image
               src={LogoContainer}
               alt="navbar-container"
-              // className="w-full h-16 mb-3 bg-cover"
+              className="w-full h-14 my-3 object-cover"
             />
             <h1 className="text-orange-500 border p-1 inline-block">
               Navbar Items Container
@@ -167,7 +167,7 @@ export default function Challenge() {
             <Image
               src={navItemsContainer}
               alt="navbar-container"
-              // className="w-full h-16 mb-3 bg-cover"
+              className="w-full h-14 my-3 object-cover"
             />
           </div>
         </div>
