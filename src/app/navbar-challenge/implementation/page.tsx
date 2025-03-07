@@ -18,11 +18,7 @@ export default function Implementation() {
     <div>
       <section className="w-[85%] mx-auto py-5">
         {party && (
-          <Confetti
-            numberOfPieces={900}
-            recycle={false}
-            className="w-[1300px]"
-          />
+          <Confetti numberOfPieces={900} recycle={false} className="w-full" />
         )}
         <div>
           <p className="italic text-lg">
@@ -303,7 +299,7 @@ export default function Implementation() {
 
         {party && (
           <div className="flex justify-end mt-10">
-            <Link href="/" className="cursor-pointer">
+            <Link href="/challenges" className="cursor-pointer">
               <button className="px-8 py-2 bg-purple-500 text-gray-100 rounded-full font-medium cursor-pointer hover:bg-purple-600 duration-300 delay-75 animate-pulse">
                 Ready for Next Challenge 💣
               </button>
