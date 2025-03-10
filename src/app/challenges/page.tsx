@@ -18,15 +18,15 @@ export default function Challenges() {
             </button>
           </Link>
 
-          {/* <Link href="#">
+          <Link href="/card-challenge">
             <button>
               <li className="hover:text-pink-500 cursor-pointer">
-                🔹 Grid Challenge
+                🔹 Card Challenge
               </li>
             </button>
           </Link>
 
-          <Link href="#">
+          {/* <Link href="#">
             <button>
               <li className="hover:text-pink-500 cursor-pointer">
                 🔹 Footer Challenge

@@ -13,6 +13,8 @@ export default function Implementation() {
   const [navbarItemsContainer, setNavbarItemsContainer] = useState<string[]>(
     []
   );
+
+  console.log(navbarItemsContainer);
   const [party, setParty] = useState(false);
   return (
     <div>
@@ -24,6 +26,9 @@ export default function Implementation() {
           <p className="italic text-lg">
             Let`s recreate the{" "}
             <span className="text-purple-600">Navbar 🔥</span>{" "}
+            <span className="font-semibold text-sm">
+              ( P.S : Little bit styled for better experience )
+            </span>
           </p>
         </div>
 
@@ -50,16 +55,17 @@ export default function Implementation() {
         </div>
 
         {/* Content bar */}
-        <div className="max-w-[700px] my-2 mx-auto">
+        <div className="max-w-[700px] my-2 mx-auto bg-pink-100">
           <div
-            className={`border-2 border-pink-500 p-3  ${navbarContainer
-              .map((i) => i)
-              .join(" ")} `}
+            className={`${
+              navbarContainer.length == 2 ? "" : "border-2 border-pink-500"
+            }  p-3  ${navbarContainer.map((i) => i).join(" ")} `}
           >
             <div
-              className={`border-2 border-blue-500 cursor-pointer ${logoContainer
-                .map((i) => i)
-                .join(" ")}`}
+              className={`${
+                navbarContainer.length === 2 ? "border-2 border-blue-500" : ""
+              } ${logoContainer.length === 3 ? "border-none" : ""}
+              cursor-pointer ${logoContainer.map((i) => i).join(" ")}`}
             >
               <Image src={Logo} alt="logo" width="30" height="30" />
               <h1 className="text-purple-400 font-bold text-lg">
@@ -68,9 +74,11 @@ export default function Implementation() {
             </div>
 
             <ul
-              className={`border-2 border-orange-500 ${navbarItemsContainer
-                .map((i) => i)
-                .join(" ")}`}
+              className={`${
+                logoContainer.length == 3 ? "border-2 border-orange-500" : ""
+              } ${
+                navbarItemsContainer.length === 3 ? "border-none" : ""
+              } ${navbarItemsContainer.map((i) => i).join(" ")}`}
             >
               {navMenus.map((menu) => (
                 <li
@@ -272,7 +280,8 @@ export default function Implementation() {
                       onClick={() => {
                         setNavbarItemsContainer((prev) => [
                           ...prev,
-                          "items-center gap-5",
+                          "items-center",
+                          "gap-5",
                         ]);
                         setParty(true);
                       }}
